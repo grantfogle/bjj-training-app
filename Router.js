@@ -1,14 +1,15 @@
 import React from 'React';
-import { Scene, Router, Action } from 'react-native-router-flux';
+import { Scene, Router, Actions } from 'react-native-router-flux';
 import Main from './components/Main';
 
 const RouterComponent = () => {
     return (
-        <Router style={StyleSheet.container}>
-            <Scene key="root"
-                rightTitle="New Session"
-                component={Main}
-                title="Daily Jiu Jitsu">
+        <Router style={styles.container}>
+            <Scene key="root">
+                <Scene key="main"
+                    component={Main}
+                    title="Daily Jiu Jitsu"
+                    initial />
             </Scene>
         </Router>
     )

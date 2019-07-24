@@ -4,10 +4,15 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 class Main extends Component {
     constructor(props) {
         super(props)
+        this.state = {}
     }
     render() {
         return (
-            <h1>cats</h1>
+            <View>
+                <Text>cats</Text>
+            </View>
         );
     }
 }
+
+export default Main;
