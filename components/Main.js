@@ -7,21 +7,34 @@ class Main extends Component {
         this.state = {}
     }
     render() {
+        const { mainContainer, getStartedButton } = styles;
         return (
-            <View>
+            <View style={mainContainer}>
                 <Text>cats</Text>
+
+                <View style={getStartedButton}>
+                    <Text>Get Started</Text>
+                </View>
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    mainContainer: {
         flex: 1,
-        backgroundColor: '#3498db',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: '#fff',
+        // alignItems: 'center',
+        justifyContent: 'space-between',
     },
+    getStartedButton: {
+        backgroundColor: '#3498db',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        width: '100%',
+        // marginBottom: 40,
+    }
 });
 
 export default Main;
