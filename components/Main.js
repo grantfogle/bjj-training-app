@@ -1,5 +1,6 @@
 import React, { Component } from 'React';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import DrillType from './DrillType';
 
 class Main extends Component {
     constructor(props) {
@@ -7,14 +8,14 @@ class Main extends Component {
         this.state = {}
     }
     render() {
-        const { mainContainer, getStartedButton } = styles;
+        const { mainContainer, getStartedButton, getStartedButtonText } = styles;
         return (
             <View style={mainContainer}>
                 <Text>cats</Text>
 
-                <View style={getStartedButton}>
-                    <Text>Get Started</Text>
-                </View>
+                <TouchableOpacity style={getStartedButton}>
+                    <Text style={getStartedButtonText}>Get Started</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -31,9 +32,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#3498db',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60,
+        height: 80,
         width: '100%',
         // marginBottom: 40,
+    },
+    getStartedButtonText: {
+        fontSize: 30,
+        color: '#fff',
     }
 });
 
