@@ -9,6 +9,7 @@ const RouterComponent = () => {
                 <Scene key="main"
                     component={Main}
                     title="Daily Jiu Jitsu"
+                    hideNavBar
                     initial />
             </Scene>
         </Router>

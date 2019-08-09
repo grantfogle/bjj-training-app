@@ -1,23 +1,27 @@
 import React from 'react';
-import { View } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 
-const DrillType = ({ children }) => {
+const DrillType = ({ drill }) => {
+    const { drillTypeContainer } = styles;
+
     return (
-        <View>
-            {/* Icon */}
-            <Text>{children}</Text>
-        </View>
+        <TouchableOpacity style={drillTypeContainer}>
+            <Text>{drill}</Text>
+        </TouchableOpacity>
     )
 }
 
 const styles = {
-    container: {
+    drillTypeContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        height: 150,
+        margin: 5,
+        width: 150,
         borderRadius: 5,
-        width: 1
+        borderWidth: 1,
+        borderColor: '#dfdfdf',
     }
 }
 
