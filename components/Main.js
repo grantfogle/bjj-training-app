@@ -33,8 +33,8 @@ class Main extends Component {
                 <View style={drillsContainer}>
                     {this.generateDrillTypes(this.state.drillTypes)}
                 </View>
-                <TouchableOpacity style={getStartedButton}>
-                    <Text style={getStartedButtonText}>Get Started</Text>
+                <TouchableOpacity style={getStartedButton} route="createDrill">
+                    <Text style={getStartedButtonText}>Select Positions</Text>
                 </TouchableOpacity>
             </View>
         );
